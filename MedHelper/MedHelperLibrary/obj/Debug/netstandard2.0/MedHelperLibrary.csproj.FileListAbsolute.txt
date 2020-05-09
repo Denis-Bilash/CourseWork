@@ -1,0 +1,8 @@
+C:\Users\denbi\source\repos\MedHelper\MedHelperLibrary\bin\Debug\netstandard2.0\MedHelperLibrary.deps.json
+C:\Users\denbi\source\repos\MedHelper\MedHelperLibrary\bin\Debug\netstandard2.0\MedHelperLibrary.dll
+C:\Users\denbi\source\repos\MedHelper\MedHelperLibrary\bin\Debug\netstandard2.0\MedHelperLibrary.pdb
+C:\Users\denbi\source\repos\MedHelper\MedHelperLibrary\obj\Debug\netstandard2.0\MedHelperLibrary.csprojAssemblyReference.cache
+C:\Users\denbi\source\repos\MedHelper\MedHelperLibrary\obj\Debug\netstandard2.0\MedHelperLibrary.AssemblyInfoInputs.cache
+C:\Users\denbi\source\repos\MedHelper\MedHelperLibrary\obj\Debug\netstandard2.0\MedHelperLibrary.AssemblyInfo.cs
+C:\Users\denbi\source\repos\MedHelper\MedHelperLibrary\obj\Debug\netstandard2.0\MedHelperLibrary.dll
+C:\Users\denbi\source\repos\MedHelper\MedHelperLibrary\obj\Debug\netstandard2.0\MedHelperLibrary.pdb
