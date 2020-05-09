@@ -1,0 +1,9 @@
+C:\Users\denbi\source\repos\MedHelper\MedHelper\bin\Debug\MedHelper.exe.config
+C:\Users\denbi\source\repos\MedHelper\MedHelper\bin\Debug\MedHelper.exe
+C:\Users\denbi\source\repos\MedHelper\MedHelper\bin\Debug\MedHelper.pdb
+C:\Users\denbi\source\repos\MedHelper\MedHelper\obj\Debug\MedHelper.csprojAssemblyReference.cache
+C:\Users\denbi\source\repos\MedHelper\MedHelper\obj\Debug\MedHelper.Form1.resources
+C:\Users\denbi\source\repos\MedHelper\MedHelper\obj\Debug\MedHelper.Properties.Resources.resources
+C:\Users\denbi\source\repos\MedHelper\MedHelper\obj\Debug\MedHelper.csproj.GenerateResource.cache
+C:\Users\denbi\source\repos\MedHelper\MedHelper\obj\Debug\MedHelper.exe
+C:\Users\denbi\source\repos\MedHelper\MedHelper\obj\Debug\MedHelper.pdb
