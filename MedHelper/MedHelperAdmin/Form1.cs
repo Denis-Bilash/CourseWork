@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MedHelperLibrary.DAL;
+using MedHelperLibrary.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,20 @@ namespace MedHelperAdmin
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Hospital hospital = new Hospital();
+            hospital.AddTestData(100);
+            label1.Text = Convert.ToString(hospital.Portions[0].Medicine.Id);
+            hospital.Save();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }
