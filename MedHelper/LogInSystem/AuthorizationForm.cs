@@ -1,5 +1,6 @@
 ﻿using MedHelperAdmin;
 using MedHelperLibrary.Models;
+using MedHelperLibrary.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,6 @@ namespace LogInSystem
 {
     public partial class AuthorizationForm : Form
     {
-        Hospital hospital;
         public AuthorizationForm()
         {
             InitializeComponent();
@@ -24,9 +24,11 @@ namespace LogInSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            hospital = new Hospital();
-            hospital.Load();                     // Загружаем данные в начеле роботы
+        }
 
+        public void ErrorHandler(string message) 
+        {
+            MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,18 +38,29 @@ namespace LogInSystem
             bool cheked = false;
             string AuthorizationAccess = "";
 
-            foreach (User us in hospital.Users) 
+            // Считываем данные с файла accaunt.txt, 
+            // проверяем на соответствие
+            using (UsersLoader UserData = new UsersLoader()) 
             {
-                if (us.Login == login)
-                    if (us.Password == password)
+                UserData.LoadError += ErrorHandler;
+                UserData.Load();
+
+                if (UserData.users != null)
+                {
+                    foreach (User us in UserData.users)
                     {
-                        cheked = true;
-                        AuthorizationAccess = us.Access;
+                        if (us.Login == login)
+                            if (us.Password == password)
+                            {
+                                cheked = true;
+                                AuthorizationAccess = us.Access;
+                                break;
+                            }
                     }
+                }
             }
 
-            textBox1.Text = hospital.Users[0].Login;
-            textBox2.Text = hospital.Users[0].Password;
+         
 
             ////Первый вариант
             //string AdminAppPath = @"\MedHelperAdmin\bin\Debug\MedHelperAdmin.exe";
@@ -64,7 +77,7 @@ namespace LogInSystem
             if (cheked && AuthorizationAccess == "Admin")   //Запускаем программу для администратора 
             {
                 // Второй вариант
-                AdminAppForm H = new AdminAppForm(hospital);
+                AdminAppForm H = new AdminAppForm();
                 this.Visible = false;
                 H.ShowDialog();
                 Close();
